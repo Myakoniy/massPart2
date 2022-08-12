@@ -37,21 +37,28 @@ public class Main {
             if (maxZp < zarplata[i]) {
                 maxZp = zarplata[i];
             }
-        }
-        for (int i = 0; i < zarplata.length; i++) {
             if (minZp > zarplata[i]) {
                 minZp = zarplata[i];
             }
         }
+
 
         System.out.println("Минимальная сумма трат за день составила " + minZp + " Рублей. Максимальная сумма трат за день составила " + maxZp + " рублей");
 
         //Zadanie 3
         System.out.println("Zadanie 3");
 
-        float middleZp = sum / 30;
 
-        System.out.println("«Средняя сумма трат за месяц составила " + middleZp + " рублей»");
+
+        if (zarplata.length > 0) {
+
+            double  summid = 0;
+            for (int z = 0; z < zarplata.length; z++) {
+                summid += zarplata[z];
+            }
+            double midlezp = summid / zarplata.length;
+            System.out.println("«Средняя сумма трат за месяц составила " + midlezp + " рублей»");
+        }
 
 
         //Zadanie 4
